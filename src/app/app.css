@@ -1,0 +1,22 @@
+body {
+            /* Ensures body takes up full screen height */
+            height: 100vh;
+            margin: 0;
+            
+            /* Flexbox to center content */
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: center;     /* Vertical center */
+            
+            /* Optional: Font and background styling */
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .centered-box {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }

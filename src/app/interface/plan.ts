@@ -1,7 +1,7 @@
 export type Plan = {
     id: number;
     name: string;
-    status: string;
-    paymentFrequency: number    
+    isActive: string;
+    paymentFrequencyInDays: number    
     price: number;
 }

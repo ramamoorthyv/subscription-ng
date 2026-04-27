@@ -1,13 +1,16 @@
-import { Component, signal } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component,  signal } from '@angular/core';
+import {  RouterOutlet, RouterLink } from '@angular/router';
+import { Navigation } from "./navigation/navigation";
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, Navigation],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
   protected readonly title = signal('subscription');
+    
 }
+

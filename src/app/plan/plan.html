@@ -1,3 +1,5 @@
-<div *ngFor="let p of plans()">
-      {{ p.name }}
-    </div>
+@for (item of plans(); track item.id) {
+  <div>{{ item.name }} - {{ item.price }} - {{ item.isActive }} - {{ item.paymentFrequencyInDays }}</div>
+} @empty {
+  <div>No items</div>
+}

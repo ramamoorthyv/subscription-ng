@@ -1,0 +1,15 @@
+    <a routerLink="/home">Home</a> &nbsp;
+  
+  <a routerLink="/plan">Plan</a>&nbsp;  
+  @if (isAuthenticated()) {
+    <a routerLink="/myplans">My Plans</a>&nbsp;  
+    <a (click)="handleLogout($event)" >Logout</a>&nbsp;
+  }@else {
+    <a routerLink="/login">Login</a>&nbsp;
+  }
+
+  <a routerLink="/signup">Signup</a>&nbsp;
+  
+  
+  
+  

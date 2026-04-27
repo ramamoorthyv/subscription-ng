@@ -16,15 +16,15 @@ export class Login {
   password: string = 'Tagse@#$';
 
   constructor(private authApiService: AuthApiService, private router: Router) {}  
-  doLogin() {
+  handleLogin() {
     this.authApiService.login(this.email, this.password).subscribe({
       next: (response: LoginResponse) => {
         console.log('Login successful:', response);
-        localStorage.setItem('authToken', response.token || '');  
-        this.router.navigate(['plan']);      
+        this.authApiService.setAuthInfo(response.token || '');
+        this.router.navigate(['plan']);
       },
       error: (err) => {
-        console.error('Error during login:', err);
+        console.error('Login failed:', err);
       }
     });
   }
